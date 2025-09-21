@@ -8,15 +8,15 @@
 
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Rubik", sans-serif;
-    --nav-font: "Kanit", sans-serif;
+
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -63,10 +63,9 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-    color: var(--default-color);
-    font-family: var(--default-font);
     background: white;
     position: relative;
+    font-family: "Karla", sans-serif;
 }
 
 body::before {
@@ -95,7 +94,6 @@ body::after {
 }
 
 a {
-    color: var(--accent-color);
     text-decoration: none;
     transition: 0.3s;
 }
@@ -192,7 +190,7 @@ h6 {
 }
 
 .header .logo img {
-    max-height: 120px;
+    max-height: 100px;
     margin-right: 8px;
 }
 
@@ -210,6 +208,7 @@ h6 {
     background-color: rgba(255, 255, 255, 0.25);
     color: white;
     font-size: 18px;
+    font-weight: 800;
     padding: 8px 20px;
     border-radius: 5px;
     margin: 2px;
@@ -264,7 +263,7 @@ h6 {
         color: white;
         font-size: 24px;
         font-family: var(--nav-font);
-        font-weight: 600;
+        font-weight: 800;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -2359,7 +2358,6 @@ section,
 
 .footer .ticket-card .ticket-header .ticket-icon img {
     height: 150px;
-    margin: 20px 0 20px 0;
     align-content: center;
     align-items: center;
 }
@@ -2390,34 +2388,16 @@ section,
 
 .footer .cta-buttons .btn {
     padding: 0.875rem 2rem;
+    color: white;
     font-weight: 600;
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
-.footer .cta-buttons .btn.btn-primary {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-}
-
-.footer .cta-buttons .btn.btn-primary:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 10%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
-}
-
-.footer .cta-buttons .btn.btn-outline {
-    background: transparent;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.footer .cta-buttons .btn.btn-outline:hover {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transform: translateY(-2px);
 }
 
 .footer .ticket-card .ticket-header .price-section {
@@ -2442,11 +2422,24 @@ section,
     color: white;
 }
 
+.footer .ticket-card .ticket-header .ticket-title {
+    margin: 20px 0 10px 0;
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.footer .ticket-card .ticket-header .ticket-title-2 {
+    margin: 20px 0 10px 0;
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+
 .footer .ticket-card .ticket-header .ticket-subtitle {
-    font-size: 14px;
-    color: color-mix(in srgb, var(--default-color), transparent 40%);
-    margin: 0;
-    font-style: italic;
+    color: white;
+    font-size: 18px;
 }
 
 .footer .ticket-card .ticket-body {
@@ -4772,6 +4765,7 @@ section,
     justify-content: center;
     text-align: center;
     padding: 0 20px 0 20px;
+    line-height: 25px;
 }
 
 .features-2 .features-list .feature-item .feature-icon {
