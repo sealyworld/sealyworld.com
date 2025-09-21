@@ -537,7 +537,6 @@ section,
     background: var(--surface-color);
     padding: 1.5rem;
     border-radius: 16px;
-    box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 85%);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -594,12 +593,6 @@ section,
     box-shadow: 0 4px 20px color-mix(in srgb, var(--default-color), transparent 90%);
     transition: all 0.3s ease;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.about .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px color-mix(in srgb, var(--default-color), transparent 80%);
-    border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .about .feature-card .feature-icon {
@@ -728,11 +721,6 @@ section,
     height: 100%;
 }
 
-.tickets .ticket-card:hover {
-    box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-color), transparent 85%);
-    border-color: var(--accent-color);
-}
-
 .tickets .ticket-card .popular-badge {
     position: absolute;
     top: 15px;
@@ -841,14 +829,14 @@ section,
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.19);
     backdrop-filter: blur(2px);
-    background-color: #ffd272;
-    color: white;
+    background-color: #038fd9;
+    color: #ffffff;
     text-align: center;
     padding: 14px 0;
     border-radius: 0 0 12px 12px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 800;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
@@ -864,9 +852,6 @@ section,
     transform: scale(1.05) translateY(-10px);
 }
 
-.tickets .ticket-card.premium .ticket-header {
-    background: linear-gradient(145deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 20%));
-}
 
 .tickets .ticket-card.premium .ticket-header .ticket-title,
 .tickets .ticket-card.premium .ticket-header .ticket-subtitle {
@@ -920,10 +905,6 @@ section,
     align-content: center;
 }
 
-.footer .ticket-card:hover {
-    box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-color), transparent 85%);
-    border-color: var(--accent-color);
-}
 
 .footer .ticket-card .popular-badge {
     position: absolute;
@@ -986,7 +967,7 @@ section,
     backdrop-filter: blur(2px);
 }
 
-.footer .cta-buttons .btn-discord{
+.footer .cta-buttons .btn-discord {
     padding: 0.875rem 2rem;
     color: white;
     font-weight: 600;
@@ -1101,10 +1082,6 @@ section,
     box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 90%);
 }
 
-.footer .ticket-card.premium:hover {
-    transform: scale(1.05) translateY(-10px);
-}
-
 .footer .ticket-card.premium .ticket-header {
     background: linear-gradient(145deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 20%));
 }
@@ -1170,10 +1147,6 @@ section,
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.features-2 .features-list .feature-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-}
 
 .features-2 .features-list .feature-item.text-feature {
     justify-content: center;
@@ -1251,10 +1224,6 @@ section,
     text-decoration: none;
 }
 
-.features-2 .features-list .feature-item .button-check:hover {
-    background: color-mix(in srgb, var(--accent-color), black 10%);
-    transform: translateY(-2px);
-}
 
 .features-2 .features-list .feature-item.text-feature .feature-content p {
     font-size: 24px;
