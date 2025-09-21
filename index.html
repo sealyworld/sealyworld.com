@@ -15,7 +15,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
 
 
     <!-- Vendor CSS Files -->
@@ -30,66 +31,70 @@
 </head>
 
 <body class="index-page">
-
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <!-- Logo mejorado -->
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="src/img/web-logo-sealy.png" alt="">
+            <img src="src/img/web-logo-sealy.png" alt="SealyWorld Logo" class="logo-img">
         </a>
 
+        <!-- Navegación mejorada -->
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="#about">¿Como Jugar?</a></li>
-                <li><a href="#schedule" class="active">Comprar Safiros</a></li>
-                <li><a href="#speakers">Votar</a></li>
+                <li><a href="#about" class="nav-link">¿Cómo Jugar?</a></li>
+                <li><a href="#schedule" class="nav-link active">Comprar Safiros</a></li>
+                <li><a href="#speakers" class="nav-link">Votar</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <div class="justify-content-center">
-            <a class="btn-getstarted" href="buy-tickets.html"><i class="bi bi-discord"></i></a>
-            <a class="btn-getstarted" href="buy-tickets.html">sealyworld.com</a>
-            <a class="btn-getstarted" href="buy-tickets.html"><i class="bi bi-translate"></i></a>
+        <!-- Botones de acción mejorados -->
+        <div class="header-actions d-flex align-items-center">
+            <a class="btn-getstarted btn-icon" href="#" title="Discord" aria-label="Unirse a Discord">
+                <i class="bi bi-discord"></i>
+            </a>
+            <a class="btn-getstarted btn-primary d-none d-md-inline-flex" href="#" target="_blank">
+                sealyworld.com
+            </a>
+            <a class="btn-getstarted btn-icon" href="#" title="Cambiar idioma" aria-label="Cambiar idioma">
+                <i class="bi bi-translate"></i>
+            </a>
         </div>
-
     </div>
 </header>
 
 <main class="main">
 
-    <!-- Features 2 Section -->
     <section id="features-2" class="features-2 section">
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
             <div class="features-list row gy-4">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-12">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-icon">
-                            <img src="src/img/myclass.png" alt="">
+                            <img src="src/img/myclass.png" alt="Usuario">
                         </div>
                         <div class="feature-content">
-                            <label>
+                            <div class="input-group">
                                 <input type="text" class="input-name" placeholder="Ingresa tu nombre">
-                            </label>
-                            <a href="" class="button-check"><i class="bi bi-check-lg"></i></a>
+                                <button class="button-check" type="button">
+                                    <i class="bi bi-check-lg"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-8">
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-8 col-md-12">
+                    <div class="feature-item text-feature" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-content">
-                            <p>USA TUS ESMERALDAS PARA OBFFFFTENER EQUIPAMIENTOS,<br>
+                            <p>USA TUS ESMERALDAS PARA OBTENER EQUIPAMIENTOS,<br>
                                 ITEMS EXCLUSIVOS Y BOOSTERS DENTRO DEL SERVIDOR!</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-    </section><!-- /Features 2 Section -->
+    </section>
 
     <!-- Tickets Section -->
     <section id="tickets" class="tickets section">
