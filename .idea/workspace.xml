@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47b131f-6a38-4c66-b0ef-690f5ef5538e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/6640387.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/2025-09-21_01.46.17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/2025-09-21_01.46.21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/2025-09-21_01.46.25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/2025-09-21_01.46.33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/3826663.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/4142.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/4143.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/6640387.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/anhuar/Documents/work/code/sealyworld/sealyworld.com/src/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anhua/Documents/work/code/sealyworld/sealyworld.com/src/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -48,18 +54,31 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/img" />
       <recent name="C:\Users\anhua\Documents\work\code\sealyworld\sealyworld.com\src\img" />
+      <recent name="$PROJECT_DIR$/src/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anhua\Documents\work\code\sealyworld\sealyworld.com\src\img" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="sealyworld.com" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="sealyworld.com" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -77,6 +96,8 @@
       <workItem from="1758411476525" duration="1332000" />
       <workItem from="1758418117220" duration="234000" />
       <workItem from="1758431329579" duration="658000" />
+      <workItem from="1758434286710" duration="5603000" />
+      <workItem from="1758440362532" duration="3659000" />
     </task>
     <servers />
   </component>
