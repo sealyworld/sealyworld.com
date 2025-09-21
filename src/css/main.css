@@ -2319,7 +2319,6 @@ section,
     }
 }
 
-
 .footer .ticket-card {
     border: 2px solid rgba(255, 255, 255, 0.19);
     backdrop-filter: blur(2px);
@@ -2353,7 +2352,7 @@ section,
 }
 
 .footer .ticket-card .ticket-header {
-    padding-top: 25px;
+    background-color: red;
     text-align: center;
 }
 
@@ -2370,13 +2369,13 @@ section,
     color: white;
 }
 
-.footer .ticket-card .ticket-header .ticket-title h4{
+.footer .ticket-card .ticket-header .ticket-title h4 {
     font-size: 24px;
     font-weight: 600;
     color: white;
 }
 
-.footer .ticket-card .ticket-header .ticket-title p{
+.footer .ticket-card .ticket-header .ticket-title p {
     font-size: 14px;
     font-weight: 600;
     color: white;
