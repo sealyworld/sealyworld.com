@@ -2330,6 +2330,7 @@ section,
     height: 100%;
     align-items: center;
     justify-items: center;
+    align-content: center;
 }
 
 .footer .ticket-card:hover {
@@ -2352,7 +2353,6 @@ section,
 }
 
 .footer .ticket-card .ticket-header {
-    background-color: red;
     text-align: center;
 }
 
