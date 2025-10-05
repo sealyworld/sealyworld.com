@@ -97,6 +97,10 @@ h6 {
     transition: 0.3s;
 }
 
+.header .btn-getstarted:hover {
+    transform: scale(0.95);
+}
+
 .header .btn-getstarted-discord {
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.25);
@@ -109,6 +113,10 @@ h6 {
     transition: 0.3s;
 }
 
+.header .btn-getstarted-discord:hover {
+    transform: scale(0.95);
+}
+
 .header .btn-getstarted-ip {
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.25);
@@ -119,6 +127,10 @@ h6 {
     border-radius: 5px;
     margin: 2px;
     transition: 0.3s;
+}
+
+.header .btn-getstarted-ip:hover {
+    transform: scale(0.95);
 }
 
 
@@ -178,6 +190,10 @@ h6 {
         transition: 0.3s;
         text-transform: uppercase;
         margin: 10px;
+    }
+
+    .navmenu a:hover{
+        transform: scale(0.95);
     }
 
     .navmenu a i,
@@ -842,6 +858,12 @@ section,
     transition: all 0.3s ease;
 }
 
+.tickets .ticket-card .ticket-body .ticket-btn:hover {
+    transform: scale(1.08);
+    letter-spacing: 2px;
+    background-color: #0098e8;
+}
+
 .tickets .ticket-card.premium {
     transform: scale(1.05);
     border-color: var(--accent-color);
@@ -1018,6 +1040,14 @@ section,
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(2px);
+}
+
+.footer .cta-buttons .btn-discord:hover {
+    transform: scale(0.95);
+}
+
+.footer .cta-buttons .btn-quest:hover {
+    transform: scale(0.95);
 }
 
 .footer .ticket-card .ticket-header .price-section {
