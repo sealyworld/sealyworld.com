@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47b131f-6a38-4c66-b0ef-690f5ef5538e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/img/BARRIL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/BOLSA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/COFRE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/PAQUETE_2_-_3GEMA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/c00f7718-d39f-4873-8a4d-5c1c8ff034fd_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/fondo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/vecteezy_tropical-summer-beach-shore-vector-illustration-background_17763630.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;myclxss&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sealyworld/sealyworld.com&quot;,
+    &quot;accountId&quot;: &quot;b67df678-9c29-49f9-8a82-2f38fb31cb57&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -35,7 +57,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anhua/Documents/work/code/SealyWorld/sealyworld.com&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anhua/Documents/work/code/SealyWorld/sealyworld.com/src/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anhua\Documents\work\code\SealyWorld\sealyworld.com\src\img" />
       <recent name="$PROJECT_DIR$/src/img" />
       <recent name="C:\Users\anhua\Documents\work\code\sealyworld\sealyworld.com\src\img" />
     </key>
@@ -79,7 +102,12 @@
       <workItem from="1758450357271" duration="43000" />
       <workItem from="1758450405302" duration="7220000" />
       <workItem from="1759688655480" duration="31000" />
-      <workItem from="1759689887700" duration="3594000" />
+      <workItem from="1759689887700" duration="4292000" />
+      <workItem from="1759726333072" duration="120000" />
+      <workItem from="1759726935353" duration="59000" />
+      <workItem from="1759728163448" duration="55000" />
+      <workItem from="1759729260690" duration="278000" />
+      <workItem from="1759933758868" duration="1291000" />
     </task>
     <servers />
   </component>

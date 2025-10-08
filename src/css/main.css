@@ -9,7 +9,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-    background: #cefff2 url("../img/4143.png") center center no-repeat;
+    background: #cefff2 url("../img/background.jpg") center center no-repeat;
     background-size: cover;
     left: 0;
     right: 0;
@@ -21,7 +21,7 @@ body::before {
 body::after {
     content: "";
     position: fixed;
-    background: rgba(0, 0, 0, 0.19);
+    background: rgba(0, 0, 0, 0.3);
     left: 0;
     right: 0;
     top: 0;
@@ -192,7 +192,7 @@ h6 {
         margin: 10px;
     }
 
-    .navmenu a:hover{
+    .navmenu a:hover {
         transform: scale(0.95);
     }
 
@@ -960,18 +960,31 @@ section,
     margin: 0; /* Quitar márgenes que puedan afectar */
 }
 
-/* Estilo para el h3 */
+/* Mantener el tamaño normal para textos cortos */
 .footer .ticket-card .ticket-header .ticket-icon h3 {
-    margin: 0; /* Quitar márgenes predeterminados */
+    margin: 0;
     color: white;
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 700;
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(2px);
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
 
+/* Reducir tamaño para textos largos (más de 5 caracteres) */
+.footer .ticket-card .ticket-header .ticket-icon h3.text-long {
+    font-size: 26px;
+}
+
+/* Reducir aún más para textos muy largos */
+.footer .ticket-card .ticket-header .ticket-icon h3.text-very-long {
+    font-size: 24px;
 }
 
 /* Responsive para pantallas pequeñas */
@@ -1218,7 +1231,6 @@ section,
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-
 .features-2 .features-list .feature-item.text-feature {
     justify-content: center;
     text-align: center;
@@ -1261,9 +1273,10 @@ section,
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     padding: 8px 10px;
-    color: white;
-    font-size: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    color: rgba(56, 56, 56, 0.56);
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0);
     transition: all 0.3s ease;
     outline: none;
     min-width: 0;
@@ -1286,7 +1299,7 @@ section,
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     padding: 8px 10px;
-    color: white;
+    color: rgba(56, 56, 56, 0.56);
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
