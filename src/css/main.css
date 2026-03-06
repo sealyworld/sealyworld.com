@@ -4,6 +4,11 @@ body {
     background: white;
     position: relative;
     font-family: "Karla", sans-serif;
+    min-width: unset;
+}
+
+@media (max-width: 767px) {
+    body { min-width: unset; }
 }
 
 body::before {
@@ -40,17 +45,17 @@ a:hover {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
     font-family: var(--heading-font);
 }
 
-.header {
+
+/*--------------------------------------------------------------
+# Cabecera (Header)
+--------------------------------------------------------------*/
+
+.tienda-cabecera {
     position: static;
     margin-top: 20px;
     --surface-color: #e8e6f3;
@@ -59,7 +64,7 @@ h6 {
     z-index: 997;
 }
 
-.header .header-container {
+.tienda-cabecera__contenedor {
     transition: all 0.5s;
     position: relative;
     padding-top: 10px;
@@ -67,24 +72,17 @@ h6 {
     border-radius: 10px;
 }
 
-.header .logo {
+.tienda-cabecera__logo {
     border-radius: 8px;
 }
 
-.header .logo img {
+.tienda-cabecera__logo img {
     max-height: 100px;
     margin-right: 8px;
 }
 
-.header .logo h1 {
-    font-size: 26px;
-    margin: 0;
-    font-weight: 400;
-    color: var(--contrast-color);
-}
-
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
+.tienda-cabecera__btn,
+.tienda-cabecera__btn:focus {
     border: 2px solid rgba(255, 255, 255, 0.19);
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.25);
@@ -97,11 +95,11 @@ h6 {
     transition: 0.3s;
 }
 
-.header .btn-getstarted:hover {
+.tienda-cabecera__btn:hover {
     transform: scale(0.95);
 }
 
-.header .btn-getstarted-discord {
+.tienda-cabecera__btn-discord {
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.25);
     color: white;
@@ -113,11 +111,11 @@ h6 {
     transition: 0.3s;
 }
 
-.header .btn-getstarted-discord:hover {
+.tienda-cabecera__btn-discord:hover {
     transform: scale(0.95);
 }
 
-.header .btn-getstarted-ip {
+.tienda-cabecera__btn-ip {
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.25);
     color: white;
@@ -129,43 +127,43 @@ h6 {
     transition: 0.3s;
 }
 
-.header .btn-getstarted-ip:hover {
+.tienda-cabecera__btn-ip:hover {
     transform: scale(0.95);
 }
 
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
+.tienda-cabecera__btn:hover,
+.tienda-cabecera__btn:focus:hover {
     color: var(--contrast-color);
     background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
 @media (max-width: 1200px) {
-    .header .logo {
+    .tienda-cabecera__logo {
         order: 1;
     }
 
-    .header .btn-getstarted {
+    .tienda-cabecera__btn {
         order: 2;
         margin: 0 15px 0 0;
         padding: 6px 15px;
     }
 
-    .header .navmenu {
+    .tienda-nav {
         order: 3;
     }
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Navegación
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
+
+/* Navegación - Escritorio */
 @media (min-width: 1200px) {
-    .navmenu {
+    .tienda-nav {
         padding: 0;
     }
 
-    .navmenu ul {
+    .tienda-nav ul {
         margin: 0;
         display: flex;
         padding: 0;
@@ -173,12 +171,12 @@ h6 {
         align-items: center;
     }
 
-    .navmenu li {
+    .tienda-nav li {
         position: relative;
     }
 
-    .navmenu a,
-    .navmenu a:focus {
+    .tienda-nav a,
+    .tienda-nav a:focus {
         color: white;
         font-size: 26px;
         font-family: var(--nav-font);
@@ -192,29 +190,29 @@ h6 {
         margin: 10px;
     }
 
-    .navmenu a:hover {
+    .tienda-nav a:hover {
         transform: scale(0.95);
     }
 
-    .navmenu a i,
-    .navmenu a:focus i {
+    .tienda-nav a i,
+    .tienda-nav a:focus i {
         font-size: 12px;
         line-height: 0;
         margin-left: 5px;
         transition: 0.3s;
     }
 
-    .navmenu li:last-child a {
+    .tienda-nav li:last-child a {
         padding-right: 0;
     }
 
-    .navmenu li:hover > a,
-    .navmenu .active,
-    .navmenu .active:focus {
+    .tienda-nav li:hover > a,
+    .tienda-nav .active,
+    .tienda-nav .active:focus {
         color: #ffd272;
     }
 
-    .navmenu .dropdown ul {
+    .tienda-nav .dropdown ul {
         margin: 0;
         padding: 10px 0;
         display: block;
@@ -229,41 +227,41 @@ h6 {
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .navmenu .dropdown ul li {
+    .tienda-nav .dropdown ul li {
         min-width: 200px;
     }
 
-    .navmenu .dropdown ul a {
+    .tienda-nav .dropdown ul a {
         padding: 10px 20px;
         font-size: 15px;
         text-transform: none;
         color: var(--nav-dropdown-color);
     }
 
-    .navmenu .dropdown ul a i {
+    .tienda-nav .dropdown ul a i {
         font-size: 12px;
     }
 
-    .navmenu .dropdown ul a:hover,
-    .navmenu .dropdown ul .active,
-    .navmenu .dropdown ul .active:hover,
-    .navmenu .dropdown ul li:hover > a {
+    .tienda-nav .dropdown ul a:hover,
+    .tienda-nav .dropdown ul .active,
+    .tienda-nav .dropdown ul .active:hover,
+    .tienda-nav .dropdown ul li:hover > a {
         color: var(--nav-dropdown-hover-color);
     }
 
-    .navmenu .dropdown:hover > ul {
+    .tienda-nav .dropdown:hover > ul {
         opacity: 1;
         top: 100%;
         visibility: visible;
     }
 
-    .navmenu .dropdown .dropdown ul {
+    .tienda-nav .dropdown .dropdown ul {
         top: 0;
         left: -90%;
         visibility: hidden;
     }
 
-    .navmenu .dropdown .dropdown:hover > ul {
+    .tienda-nav .dropdown .dropdown:hover > ul {
         opacity: 1;
         top: 0;
         left: -100%;
@@ -271,9 +269,9 @@ h6 {
     }
 }
 
-/* Navmenu - Mobile */
+/* Navegación - Móvil */
 @media (max-width: 1199px) {
-    .mobile-nav-toggle {
+    .tienda-nav__toggle {
         color: var(--nav-color);
         font-size: 28px;
         line-height: 0;
@@ -282,12 +280,12 @@ h6 {
         transition: color 0.3s;
     }
 
-    .navmenu {
+    .tienda-nav {
         padding: 0;
         z-index: 9997;
     }
 
-    .navmenu ul {
+    .tienda-nav ul {
         display: none;
         list-style: none;
         position: absolute;
@@ -302,8 +300,8 @@ h6 {
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .navmenu a,
-    .navmenu a:focus {
+    .tienda-nav a,
+    .tienda-nav a:focus {
         color: var(--nav-dropdown-color);
         padding: 10px 20px;
         font-family: var(--nav-font);
@@ -316,8 +314,8 @@ h6 {
         transition: 0.3s;
     }
 
-    .navmenu a i,
-    .navmenu a:focus i {
+    .tienda-nav a i,
+    .tienda-nav a:focus i {
         font-size: 12px;
         line-height: 0;
         margin-left: 5px;
@@ -331,26 +329,26 @@ h6 {
         background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
     }
 
-    .navmenu a i:hover,
-    .navmenu a:focus i:hover {
+    .tienda-nav a i:hover,
+    .tienda-nav a:focus i:hover {
         background-color: var(--accent-color);
         color: var(--contrast-color);
     }
 
-    .navmenu a:hover,
-    .navmenu .active,
-    .navmenu .active:focus {
+    .tienda-nav a:hover,
+    .tienda-nav .active,
+    .tienda-nav .active:focus {
         color: var(--nav-dropdown-hover-color);
     }
 
-    .navmenu .active i,
-    .navmenu .active:focus i {
+    .tienda-nav .active i,
+    .tienda-nav .active:focus i {
         background-color: var(--accent-color);
         color: var(--contrast-color);
         transform: rotate(180deg);
     }
 
-    .navmenu .dropdown ul {
+    .tienda-nav .dropdown ul {
         position: static;
         display: none;
         z-index: 99;
@@ -362,11 +360,11 @@ h6 {
         transition: all 0.5s ease-in-out;
     }
 
-    .navmenu .dropdown ul ul {
+    .tienda-nav .dropdown ul ul {
         background-color: rgba(33, 37, 41, 0.1);
     }
 
-    .navmenu .dropdown > .dropdown-active {
+    .tienda-nav .dropdown > .dropdown-active {
         display: block;
         background-color: rgba(33, 37, 41, 0.03);
     }
@@ -375,7 +373,7 @@ h6 {
         overflow: hidden;
     }
 
-    .mobile-nav-active .mobile-nav-toggle {
+    .mobile-nav-active .tienda-nav__toggle {
         color: #fff;
         position: absolute;
         font-size: 32px;
@@ -385,7 +383,7 @@ h6 {
         z-index: 9999;
     }
 
-    .mobile-nav-active .navmenu {
+    .mobile-nav-active .tienda-nav {
         position: fixed;
         overflow: hidden;
         inset: 0;
@@ -393,12 +391,11 @@ h6 {
         transition: 0.3s;
     }
 
-    .mobile-nav-active .navmenu > ul {
+    .mobile-nav-active .tienda-nav > ul {
         display: block;
     }
 }
 
-/*-
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -442,7 +439,6 @@ h6 {
     }
 }
 
-
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -455,16 +451,215 @@ section,
 }
 
 @media (max-width: 1199px) {
-
     section,
     .section {
         scroll-margin-top: 66px;
     }
 }
 
+/*--------------------------------------------------------------
+# Jugador (Nombre + Publicidad)
+--------------------------------------------------------------*/
 
+.tienda-jugador {
+    padding-top: 10px;
+}
 
-.tickets .ticket-card {
+.tienda-jugador__lista {
+    margin-bottom: 30px;
+}
+
+.tienda-jugador__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    text-align: left;
+    height: 100%;
+    border-radius: 20px;
+    min-height: 120px;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.tienda-jugador__item--publicidad {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.tienda-jugador__icono {
+    flex-shrink: 0;
+    width: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tienda-jugador__icono img {
+    height: 100px;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.tienda-jugador__contenido {
+    flex: 1;
+    width: 100%;
+}
+
+.tienda-jugador__entrada-grupo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.tienda-jugador__entrada {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 8px 10px;
+    color: rgba(56, 56, 56, 0.56);
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+    outline: none;
+    min-width: 0;
+}
+
+.tienda-jugador__entrada:focus {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.tienda-jugador__entrada::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.tienda-jugador__boton-check {
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 8px 10px;
+    color: rgba(56, 56, 56, 0.56);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.tienda-jugador__item--publicidad .tienda-jugador__contenido p {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+    .tienda-jugador__item--publicidad .tienda-jugador__contenido p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .tienda-jugador__item {
+        margin-bottom: 20px;
+    }
+
+    .tienda-jugador__item--publicidad {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tienda-jugador {
+        padding: 60px 0 40px 0;
+    }
+
+    .tienda-jugador__item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+        min-height: auto;
+    }
+
+    .tienda-jugador__icono {
+        align-self: center;
+        width: 70px;
+        height: 70px;
+    }
+
+    .tienda-jugador__icono img {
+        height: 50px;
+    }
+
+    .tienda-jugador__entrada-grupo {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .tienda-jugador__entrada {
+        width: 100%;
+    }
+
+    .tienda-jugador__boton-check {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tienda-jugador__item--publicidad {
+        flex-direction: row;
+        justify-content: center;
+        padding: 30px 20px;
+    }
+
+    .tienda-jugador__item--publicidad .tienda-jugador__contenido p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 576px) {
+    .tienda-jugador__item {
+        padding: 20px 15px;
+    }
+
+    .tienda-jugador__entrada {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .tienda-jugador__boton-check {
+        padding: 12px 15px;
+    }
+
+    .tienda-jugador__item--publicidad .tienda-jugador__contenido p {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+/*--------------------------------------------------------------
+# Paquetes de Coins
+--------------------------------------------------------------*/
+
+.tienda-paquetes__tarjeta {
     border: 2px solid rgba(255, 255, 255, 0.19);
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.25);
@@ -475,56 +670,47 @@ section,
     height: 100%;
 }
 
-
-.tickets .ticket-card .ticket-header {
+.tienda-paquetes__cabecera {
     padding-top: 25px;
     text-align: center;
 }
 
-
-.tickets .ticket-card .ticket-header .ticket-icon img {
+.tienda-paquetes__icono img {
     height: 150px;
-    margin: 20px 0 20px 0;
-    align-content: center;
-    align-items: center;
+    margin: 20px 0;
 }
 
-
-.tickets .ticket-card .ticket-header .ticket-title {
+.tienda-paquetes__titulo {
     font-size: 34px;
     font-weight: 800;
     color: white;
 }
 
-.tickets .ticket-card .ticket-header .price-section {
+.tienda-paquetes__precio {
     margin-bottom: 10px;
     display: flex;
     align-items: baseline;
     justify-content: center;
-    font-size: 34px;
-    font-weight: 800;
     gap: 5px;
 }
 
-.tickets .ticket-card .ticket-header .price-section .currency {
+.tienda-paquetes__moneda {
     font-size: 34px;
     font-weight: 700;
     color: white;
 }
 
-.tickets .ticket-card .ticket-header .price-section .amount {
+.tienda-paquetes__cantidad {
     font-size: 40px;
     font-weight: 800;
     color: white;
 }
 
-
-.tickets .ticket-card .ticket-body {
+.tienda-paquetes__cuerpo {
     padding: 10px 0 0 0;
 }
 
-
-.tickets .ticket-card .ticket-body .ticket-btn {
+.tienda-paquetes__boton {
     display: block;
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.19);
@@ -542,19 +728,23 @@ section,
     transition: all 0.3s ease;
 }
 
-.tickets .ticket-card .ticket-body .ticket-btn:hover {
+.tienda-paquetes__boton:hover {
     transform: scale(1.08);
     letter-spacing: 2px;
     background-color: #0098e8;
 }
 
 @media (max-width: 768px) {
-    .tickets .ticket-card {
+    .tienda-paquetes__tarjeta {
         margin-bottom: 20px;
     }
 }
 
-.footer .ticket-card {
+/*--------------------------------------------------------------
+# Soporte (Footer Problemas)
+--------------------------------------------------------------*/
+
+.tienda-soporte__tarjeta {
     border: 2px solid rgba(255, 255, 255, 0.19);
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.25);
@@ -563,33 +753,104 @@ section,
     position: relative;
     transition: all 0.4s ease;
     height: 100%;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-}
-
-
-
-.footer .ticket-card .ticket-header {
+    padding: 25px;
     text-align: center;
 }
 
-/* Modificar el contenedor ticket-icon para alinear la imagen y el h3 horizontalmente */
-.footer .ticket-card .ticket-header .ticket-icon {
+.tienda-soporte__titulo {
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.tienda-soporte__subtitulo {
+    color: white;
+    font-size: 18px;
+}
+
+.tienda-soporte__botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tienda-soporte__btn-discord {
+    padding: 0.875rem 2rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(2px);
+}
+
+.tienda-soporte__btn-discord:hover {
+    transform: scale(0.95);
+}
+
+.tienda-soporte__btn-ayuda {
+    padding: 0.875rem 2rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(2px);
+}
+
+.tienda-soporte__btn-ayuda:hover {
+    transform: scale(0.95);
+}
+
+/*--------------------------------------------------------------
+# Top Donador
+--------------------------------------------------------------*/
+
+.tienda-donador__tarjeta {
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.tienda-donador__titulo {
+    margin: 0 0 15px 0;
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.tienda-donador__perfil {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Espacio entre la imagen y el texto */
+    gap: 15px;
 }
 
-/* Ajustar la imagen */
-.footer .ticket-card .ticket-header .ticket-icon img {
+.tienda-donador__perfil img {
     height: 150px;
-    margin: 0; /* Quitar márgenes que puedan afectar */
 }
 
-/* Mantener el tamaño normal para textos cortos */
-.footer .ticket-card .ticket-header .ticket-icon h3 {
+.tienda-donador__nombre {
     margin: 0;
     color: white;
     font-size: 26px;
@@ -605,285 +866,20 @@ section,
     max-width: 100%;
 }
 
-/* Reducir tamaño para textos largos (más de 5 caracteres) */
-.footer .ticket-card .ticket-header .ticket-icon h3.text-long {
-    font-size: 26px;
+.tienda-donador__nombre.text-long {
+    font-size: 22px;
 }
 
-/* Reducir aún más para textos muy largos */
-.footer .ticket-card .ticket-header .ticket-icon h3.text-very-long {
-    font-size: 24px;
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 576px) {
-    .footer .ticket-card .ticket-header .ticket-icon {
-        flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
-    }
-
-    .footer .ticket-card .ticket-header .ticket-icon img {
-        height: 120px; /* Imagen más pequeña en móviles */
-    }
-}
-
-
-.footer .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer .cta-buttons .btn-quest {
-    padding: 0.875rem 2rem;
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    background-color: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(2px);
-}
-
-.footer .cta-buttons .btn-discord {
-    padding: 0.875rem 2rem;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    background-color: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(2px);
-}
-
-.footer .cta-buttons .btn-discord:hover {
-    transform: scale(0.95);
-}
-
-.footer .cta-buttons .btn-quest:hover {
-    transform: scale(0.95);
-}
-
-
-.footer .ticket-card .ticket-header .ticket-title {
-    margin: 20px 0 10px 0;
-    color: white;
-    font-size: 26px;
-    font-weight: 800;
-}
-
-.footer .ticket-card .ticket-header .ticket-title-2 {
-    margin: 20px 0 10px 0;
-    color: white;
-    font-size: 26px;
-    font-weight: 800;
-}
-
-
-.footer .ticket-card .ticket-header .ticket-subtitle {
-    color: white;
+.tienda-donador__nombre.text-very-long {
     font-size: 18px;
 }
 
-
-.features-2 {
-    padding-top: 10px;
-}
-
-.features-2 .features-list {
-    margin-bottom: 30px;
-}
-
-.features-2 .features-list .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 10px 0 10px;
-    transition: all 0.3s ease;
-    text-align: left;
-    height: 100%;
-    border-radius: 20px;
-    min-height: 120px;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.features-2 .features-list .feature-item.text-feature {
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px 0 20px;
-    line-height: 25px;
-}
-
-.features-2 .features-list .feature-item .feature-icon {
-    flex-shrink: 0;
-    width: 100px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.features-2 .features-list .feature-item .feature-icon img {
-    height: 100px;
-    object-fit: contain;
-    margin-top: 20px;
-}
-
-.features-2 .features-list .feature-item .feature-content {
-    flex: 1;
-    width: 100%;
-}
-
-.features-2 .features-list .feature-item .feature-content .input-group {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    width: 100%;
-}
-
-.features-2 .features-list .feature-item .input-name {
-    flex: 1;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 12px;
-    padding: 8px 10px;
-    color: rgba(56, 56, 56, 0.56);
-    font-size: 17px;
-    font-weight: 600;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0);
-    transition: all 0.3s ease;
-    outline: none;
-    min-width: 0;
-}
-
-.features-2 .features-list .feature-item .input-name:focus {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-.features-2 .features-list .feature-item .input-name::placeholder {
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.features-2 .features-list .feature-item .button-check {
-    flex-shrink: 0;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 12px;
-    padding: 8px 10px;
-    color: rgba(56, 56, 56, 0.56);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-
-.features-2 .features-list .feature-item.text-feature .feature-content p {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0;
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Responsive Design */
-@media (max-width: 1199px) {
-    .features-2 .features-list .feature-item.text-feature .feature-content p {
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 991px) {
-    .features-2 .features-list .feature-item {
-        margin-bottom: 20px;
-    }
-
-    .features-2 .features-list .feature-item.text-feature {
-        order: -1;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .features-2 {
-        padding: 60px 0 40px 0;
-    }
-
-    .features-2 .features-list .feature-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 25px 20px;
-        min-height: auto;
-    }
-
-    .features-2 .features-list .feature-item .feature-icon {
-        align-self: center;
-        width: 70px;
-        height: 70px;
-    }
-
-    .features-2 .features-list .feature-item .feature-icon img {
-        height: 50px;
-    }
-
-    .features-2 .features-list .feature-item .feature-content .input-group {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .features-2 .features-list .feature-item .input-name {
-        width: 100%;
-    }
-
-    .features-2 .features-list .feature-item .button-check {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .features-2 .features-list .feature-item.text-feature {
-        flex-direction: row;
-        justify-content: center;
-        padding: 30px 20px;
-    }
-
-    .features-2 .features-list .feature-item.text-feature .feature-content p {
-        font-size: 1.1rem;
-        line-height: 1.4;
-    }
-}
-
 @media (max-width: 576px) {
-    .features-2 .features-list .feature-item {
-        padding: 20px 15px;
+    .tienda-donador__perfil {
+        flex-wrap: wrap;
     }
 
-    .features-2 .features-list .feature-item .input-name {
-        padding: 12px 15px;
-        font-size: 0.9rem;
-    }
-
-    .features-2 .features-list .feature-item .button-check {
-        padding: 12px 15px;
-    }
-
-    .features-2 .features-list .feature-item.text-feature .feature-content p {
-        font-size: 1rem;
-        font-weight: 700;
+    .tienda-donador__perfil img {
+        height: 120px;
     }
 }
-

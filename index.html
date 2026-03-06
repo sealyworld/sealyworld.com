@@ -26,53 +26,55 @@
     <link href="src/css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <!-- Logo mejorado -->
-        <a href="index.html" class="logo d-flex align-items-center">
-            <img src="src/img/web-logo-sealy.png" alt="SealyWorld Logo" class="logo-img">
+<body class="tienda">
+
+<header id="tienda-cabecera" class="tienda-cabecera d-flex align-items-center fixed-top">
+    <div class="tienda-cabecera__contenedor container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="tienda-cabecera__logo d-flex align-items-center">
+            <img src="src/img/web-logo-sealy.png" alt="SealyWorld Logo">
         </a>
 
-        <!-- Navegación mejorada -->
-        <nav id="navmenu" class="navmenu">
+        <nav id="tienda-nav" class="tienda-nav">
             <ul>
-                <li><a href="#about" class="nav-link">¿Cómo Jugar?</a></li>
-                <li><a href="#schedule" class="nav-link active">Comprar Safiros</a></li>
-                <li><a href="#speakers" class="nav-link">Votar</a></li>
+                <li><a href="#tienda-jugador" class="tienda-nav__enlace">¿Cómo Jugar?</a></li>
+                <li><a href="#tienda-paquetes" class="tienda-nav__enlace active">Comprar Safiros</a></li>
+                <li><a href="#tienda-soporte" class="tienda-nav__enlace">Votar</a></li>
             </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <i class="tienda-nav__toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <!-- Botones de acción mejorados -->
-        <div class="header-actions d-flex align-items-center">
-            <a class="btn-getstarted-discord btn-icon-discord" href="#" title="Discord" aria-label="Unirse a Discord">
+        <div class="tienda-cabecera__acciones d-flex align-items-center">
+            <a class="tienda-cabecera__btn-discord" href="#" title="Discord" aria-label="Unirse a Discord">
                 <i class="bi bi-discord"></i>
             </a>
-            <a class="btn-getstarted-ip btn-primary d-none d-md-inline-flex" href="#" target="_blank">
+            <a class="tienda-cabecera__btn-ip d-none d-md-inline-flex" href="#" target="_blank">
                 SEALYWORLD.COM
             </a>
-            <a class="btn-getstarted btn-icon" href="#" title="Cambiar idioma" aria-label="Cambiar idioma">
+            <a class="tienda-cabecera__btn" href="#" title="Cambiar idioma" aria-label="Cambiar idioma">
                 1000
             </a>
         </div>
+
     </div>
 </header>
 
-<main class="main">
+<main class="tienda__contenido">
 
-    <section id="features-2" class="features-2 section">
+    <!-- Sección: Jugador (nombre + publicidad) -->
+    <section id="tienda-jugador" class="tienda-jugador section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-list row gy-4">
+            <div class="tienda-jugador__lista row gy-4">
+
                 <div class="col-lg-4 col-md-12">
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature-icon">
+                    <div class="tienda-jugador__item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tienda-jugador__icono">
                             <img src="src/img/myclass.png" alt="Usuario">
                         </div>
-                        <div class="feature-content">
-                            <div class="input-group">
-                                <input type="text" class="input-name" placeholder="Ingresa tu nombre">
-                                <button class="button-check" type="button">
+                        <div class="tienda-jugador__contenido">
+                            <div class="tienda-jugador__entrada-grupo">
+                                <input type="text" class="tienda-jugador__entrada" placeholder="Ingresa tu nombre">
+                                <button class="tienda-jugador__boton-check" type="button">
                                     <i class="bi bi-check-lg"></i>
                                 </button>
                             </div>
@@ -81,145 +83,135 @@
                 </div>
 
                 <div class="col-lg-8 col-md-12">
-                    <div class="feature-item text-feature" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature-content">
+                    <div class="tienda-jugador__item tienda-jugador__item--publicidad" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tienda-jugador__contenido">
                             <p>USA TUS ESMERALDAS PARA OBTENER EQUIPAMIENTOS,<br>
                                 ITEMS EXCLUSIVOS Y BOOSTERS DENTRO DEL SERVIDOR</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Tickets Section -->
-    <section id="tickets" class="tickets section">
+    <!-- Sección: Paquetes de coins -->
+    <section id="tienda-paquetes" class="tienda-paquetes section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
             <div class="row">
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title">100</h4>
-                            <div class="ticket-icon">
+                    <div class="tienda-paquetes__tarjeta">
+                        <div class="tienda-paquetes__cabecera">
+                            <h4 class="tienda-paquetes__titulo">100</h4>
+                            <div class="tienda-paquetes__icono">
                                 <img src="src/img/PAQUETE_2_-_3GEMA.png" alt="">
                             </div>
-                            <div class="price-section">
-                                <h4 class="currency">$</h4>
-                                <h4 class="amount">3.07</h4>
+                            <div class="tienda-paquetes__precio">
+                                <h4 class="tienda-paquetes__moneda">$</h4>
+                                <h4 class="tienda-paquetes__cantidad">3.07</h4>
                             </div>
                         </div>
-                        <div class="ticket-body">
-                            <a href="#" class="ticket-btn">Comprar</a>
+                        <div class="tienda-paquetes__cuerpo">
+                            <a href="#" class="tienda-paquetes__boton">Comprar</a>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title">500</h4>
-                            <div class="ticket-icon">
+                    <div class="tienda-paquetes__tarjeta">
+                        <div class="tienda-paquetes__cabecera">
+                            <h4 class="tienda-paquetes__titulo">500</h4>
+                            <div class="tienda-paquetes__icono">
                                 <img src="src/img/BOLSA.png" alt="">
                             </div>
-                            <div class="price-section">
-                                <h4 class="currency">$</h4>
-                                <h4 class="amount">14.99</h4>
+                            <div class="tienda-paquetes__precio">
+                                <h4 class="tienda-paquetes__moneda">$</h4>
+                                <h4 class="tienda-paquetes__cantidad">14.99</h4>
                             </div>
                         </div>
-                        <div class="ticket-body">
-                            <a href="#" class="ticket-btn">Comprar</a>
+                        <div class="tienda-paquetes__cuerpo">
+                            <a href="#" class="tienda-paquetes__boton">Comprar</a>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title">1000</h4>
-                            <div class="ticket-icon">
+                    <div class="tienda-paquetes__tarjeta">
+                        <div class="tienda-paquetes__cabecera">
+                            <h4 class="tienda-paquetes__titulo">1000</h4>
+                            <div class="tienda-paquetes__icono">
                                 <img src="src/img/COFRE.png" alt="">
                             </div>
-                            <div class="price-section">
-                                <h4 class="currency">$</h4>
-                                <h4 class="amount">24.99</h4>
+                            <div class="tienda-paquetes__precio">
+                                <h4 class="tienda-paquetes__moneda">$</h4>
+                                <h4 class="tienda-paquetes__cantidad">24.99</h4>
                             </div>
                         </div>
-                        <div class="ticket-body">
-                            <a href="#" class="ticket-btn">Comprar</a>
+                        <div class="tienda-paquetes__cuerpo">
+                            <a href="#" class="tienda-paquetes__boton">Comprar</a>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title">2500</h4>
-                            <div class="ticket-icon">
+                    <div class="tienda-paquetes__tarjeta">
+                        <div class="tienda-paquetes__cabecera">
+                            <h4 class="tienda-paquetes__titulo">2500</h4>
+                            <div class="tienda-paquetes__icono">
                                 <img src="src/img/BARRIL.png" alt="">
                             </div>
-                            <div class="price-section">
-                                <h4 class="currency">$</h4>
-                                <h4 class="amount">56.72</h4>
+                            <div class="tienda-paquetes__precio">
+                                <h4 class="tienda-paquetes__moneda">$</h4>
+                                <h4 class="tienda-paquetes__cantidad">56.72</h4>
                             </div>
                         </div>
-                        <div class="ticket-body">
-                            <a href="#" class="ticket-btn">Comprar</a>
+                        <div class="tienda-paquetes__cuerpo">
+                            <a href="#" class="tienda-paquetes__boton">Comprar</a>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
             </div>
-
         </div>
+    </section>
 
-    </section><!-- /Tickets Section -->
-
-    <!-- Tickets Section -->
-    <section id="footer" class="footer section">
+    <!-- Sección: Soporte + Top Donador -->
+    <section id="tienda-soporte" class="tienda-soporte section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
             <div class="row">
 
                 <div class="col-lg-8 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title">¿Tienes un problema?</h4>
-                            <p class="ticket-subtitle">Unete a nuestro discord y crea un ticket o lee nuestras preguntas de
-                                ayuda rapida</p>
-                            <div class="cta-buttons">
-                                <a href="#" class="btn-discord btn-outline"><i class="bi bi-discord"></i> Discord</a>
-                                <a href="#" class="btn-quest btn-outline"><i class="bi bi-question-circle-fill"></i> Preguntas</a>
-                            </div>
+                    <div class="tienda-soporte__tarjeta">
+                        <h4 class="tienda-soporte__titulo">¿Tienes un problema?</h4>
+                        <p class="tienda-soporte__subtitulo">Unete a nuestro discord y crea un ticket o lee nuestras preguntas de ayuda rapida</p>
+                        <div class="tienda-soporte__botones">
+                            <a href="#" class="tienda-soporte__btn-discord"><i class="bi bi-discord"></i> Discord</a>
+                            <a href="#" class="tienda-soporte__btn-ayuda"><i class="bi bi-question-circle-fill"></i> Preguntas</a>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="ticket-card">
-                        <div class="ticket-header">
-                            <h4 class="ticket-title-2">TOP DONADOR</h4>
-                            <div class="ticket-icon">
-                                <img src="https://vzge.me/bust/512/myclass" alt="">
-                                <h3>myclass</h3>
-                            </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tienda-donador__tarjeta">
+                        <h4 class="tienda-donador__titulo">TOP DONADOR</h4>
+                        <div class="tienda-donador__perfil">
+                            <img src="https://vzge.me/bust/512/myclass" alt="">
+                            <h3 class="tienda-donador__nombre">myclass</h3>
                         </div>
                     </div>
-                </div><!-- End Ticket Card -->
+                </div>
 
             </div>
-
         </div>
-
-    </section><!-- /Tickets Section -->
-
+    </section>
 
 </main>
 
 <!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
 
 <!-- Preloader -->
 <div id="preloader"></div>

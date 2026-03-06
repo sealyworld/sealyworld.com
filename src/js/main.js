@@ -14,7 +14,7 @@
      */
     function toggleScrolled() {
         const selectBody = document.querySelector('body');
-        const selectHeader = document.querySelector('#header');
+        const selectHeader = document.querySelector('#tienda-cabecera');
         if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
         window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
     }
@@ -25,7 +25,7 @@
     /**
      * Mobile nav toggle
      */
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileNavToggleBtn = document.querySelector('.tienda-nav__toggle');
 
     function mobileNavToogle() {
         document.querySelector('body').classList.toggle('mobile-nav-active');
@@ -40,7 +40,7 @@
     /**
      * Hide mobile nav on same-page/hash links
      */
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
+    document.querySelectorAll('#tienda-nav a').forEach(navmenu => {
         navmenu.addEventListener('click', () => {
             if (document.querySelector('.mobile-nav-active')) {
                 mobileNavToogle();
@@ -52,7 +52,7 @@
     /**
      * Toggle mobile nav dropdowns
      */
-    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+    document.querySelectorAll('.tienda-nav .toggle-dropdown').forEach(navmenu => {
         navmenu.addEventListener('click', function (e) {
             e.preventDefault();
             this.parentNode.classList.toggle('active');
@@ -107,9 +107,33 @@
 
     window.addEventListener('load', aosInit);
 
+    /**
+     * Escalar página al tamaño de pantalla (referencia 1920px)
+     */
+    function fitPageToScreen() {
+        const html = document.documentElement;
+
+        if (window.innerWidth < 768) {
+            html.style.zoom = '';
+            html.style.overflowX = '';
+            return;
+        }
+
+        const scale = window.innerWidth / 2045;
+        html.style.zoom = scale;
+        html.style.overflowX = 'hidden';
+    }
+
+    window.addEventListener('load', fitPageToScreen);
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(fitPageToScreen, 100);
+    });
 
     document.addEventListener('DOMContentLoaded', function () {
-        const nameElements = document.querySelectorAll('.footer .ticket-card .ticket-header .ticket-icon h3');
+        const nameElements = document.querySelectorAll('.tienda-donador__nombre');
 
         nameElements.forEach(element => {
             const text = element.textContent.trim();
@@ -143,7 +167,7 @@
     /**
      * Navmenu Scrollspy
      */
-    let navmenulinks = document.querySelectorAll('.navmenu a');
+    let navmenulinks = document.querySelectorAll('.tienda-nav a');
 
     function navmenuScrollspy() {
         navmenulinks.forEach(navmenulink => {
@@ -152,7 +176,7 @@
             if (!section) return;
             let position = window.scrollY + 200;
             if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-                document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+                document.querySelectorAll('.tienda-nav a.active').forEach(link => link.classList.remove('active'));
                 navmenulink.classList.add('active');
             } else {
                 navmenulink.classList.remove('active');
