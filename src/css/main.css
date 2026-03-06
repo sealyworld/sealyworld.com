@@ -1,38 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+html {
+    background-color: #cefff2;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/image.png");
+    background-attachment: fixed, fixed;
+    background-size: cover, cover;
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    min-height: 100vh;
+}
+
 body {
-    background: white;
+    background: transparent;
     position: relative;
     font-family: "Karla", sans-serif;
-    min-width: unset;
-}
-
-@media (max-width: 767px) {
-    body { min-width: unset; }
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    background: #cefff2 url("../img/image.png") center center no-repeat;
-    background-size: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -2;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    background: rgba(0, 0, 0, 0.3);
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
 }
 
 a {
