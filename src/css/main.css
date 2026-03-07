@@ -18,7 +18,7 @@ html {
     background-color: #cefff2;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../img/image.png");
+        url("../img/4143.png");
     background-attachment: fixed, fixed;
     background-size: cover, cover;
     background-position: center center, center center;
@@ -801,21 +801,6 @@ section,
 # Top Donador
 --------------------------------------------------------------*/
 
-@keyframes donador-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(255, 210, 114, 0.3), inset 0 0 20px rgba(255, 210, 114, 0.05); }
-    50%       { box-shadow: 0 0 40px rgba(255, 210, 114, 0.6), inset 0 0 30px rgba(255, 210, 114, 0.1); }
-}
-
-@keyframes trofeo-bounce {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-6px); }
-}
-
-@keyframes ring-spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
 .tienda-donador__tarjeta {
     border: 2px solid rgba(255, 210, 114, 0.5);
     backdrop-filter: blur(2px);
@@ -830,7 +815,6 @@ section,
     justify-content: center;
     padding: 25px;
     gap: 10px;
-    animation: donador-glow 3s ease-in-out infinite;
 }
 
 .tienda-donador__encabezado {
@@ -883,7 +867,6 @@ section,
     border-radius: 50%;
     background: transparent;
     border: 3px solid transparent;
-    animation: ring-spin 1.8s linear infinite;
 }
 
 
@@ -911,3 +894,4 @@ section,
     font-weight: 600;
     font-style: italic;
 }
+
