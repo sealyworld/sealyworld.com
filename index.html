@@ -31,15 +31,11 @@
 <header id="tienda-cabecera" class="tienda-cabecera d-flex align-items-center fixed-top">
     <div class="tienda-cabecera__contenedor container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="tienda-cabecera__logo d-flex align-items-center">
-            <img src="src/img/web-logo-sealy.png" alt="SealyWorld Logo">
-        </a>
-
         <nav id="tienda-nav" class="tienda-nav">
             <ul>
-                <li><a href="#tienda-jugador" class="tienda-nav__enlace">¿Cómo Jugar?</a></li>
-                <li><a href="#tienda-paquetes" class="tienda-nav__enlace active">Comprar Safiros</a></li>
-                <li><a href="#tienda-soporte" class="tienda-nav__enlace">Votar</a></li>
+                <li><a href="" class="tienda-nav__enlace">¿Cómo Jugar?</a></li>
+                <li><a href="" class="tienda-nav__enlace active">Comprar Safiros</a></li>
+                <li><a href="" class="tienda-nav__enlace">Votar</a></li>
             </ul>
             <i class="tienda-nav__toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -51,8 +47,8 @@
             <a class="tienda-cabecera__btn-ip d-none d-md-inline-flex" href="#" target="_blank">
                 SEALYWORLD.COM
             </a>
-            <a class="tienda-cabecera__btn" href="#" title="Cambiar idioma" aria-label="Cambiar idioma">
-                1000
+            <a class="tienda-cabecera__btn-carrito" href="#tienda-paquetes" title="Carrito de compras" aria-label="Carrito de compras">
+                <i class="bi bi-cart3"></i>
             </a>
         </div>
 
@@ -194,10 +190,18 @@
 
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="tienda-donador__tarjeta">
-                        <h4 class="tienda-donador__titulo">TOP DONADOR</h4>
-                        <div class="tienda-donador__perfil">
-                            <img src="https://vzge.me/bust/512/myclass" alt="">
-                            <h3 class="tienda-donador__nombre">myclass</h3>
+                        <div class="tienda-donador__encabezado">
+                            <i class="bi bi-trophy-fill tienda-donador__trofeo"></i>
+                            <p class="tienda-donador__titulo">TOP DONADOR</p>
+                        </div>
+                        <div class="tienda-donador__jugador">
+                            <div class="tienda-donador__avatar-ring">
+                                <img src="https://vzge.me/head/512/myclass.png?no=ears,shadow,cape&y=70" alt="">
+                            </div>
+                            <div class="tienda-donador__info">
+                                <h3 class="tienda-donador__nombre">myclass</h3>
+                                <p class="tienda-donador__descripcion">Quien más ha gastado este mes.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

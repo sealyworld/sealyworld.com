@@ -112,6 +112,22 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(0.95);
 }
 
+.tienda-cabecera__btn-carrito {
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+.tienda-cabecera__btn-carrito:hover {
+    transform: scale(0.95);
+}
+
 .tienda-cabecera__btn-ip {
     border: 2px solid rgba(255, 255, 255, 0.19);
     background-color: rgba(255, 255, 255, 0.25);
@@ -768,73 +784,113 @@ section,
 # Top Donador
 --------------------------------------------------------------*/
 
+@keyframes donador-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 210, 114, 0.3), inset 0 0 20px rgba(255, 210, 114, 0.05); }
+    50%       { box-shadow: 0 0 40px rgba(255, 210, 114, 0.6), inset 0 0 30px rgba(255, 210, 114, 0.1); }
+}
+
+@keyframes trofeo-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+}
+
+@keyframes ring-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
 .tienda-donador__tarjeta {
-    border: 2px solid rgba(255, 255, 255, 0.19);
+    border: 2px solid rgba(255, 210, 114, 0.5);
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(145deg, rgba(255, 210, 114, 0.12), rgba(255, 255, 255, 0.1));
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    transition: all 0.4s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 25px;
+    gap: 10px;
+    animation: donador-glow 3s ease-in-out infinite;
+}
+
+.tienda-donador__encabezado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tienda-donador__trofeo {
+    font-size: 22px;
+    color: #ffd272;
+    line-height: 1;
 }
 
 .tienda-donador__titulo {
-    margin: 0 0 15px 0;
-    color: white;
-    font-size: 26px;
+    margin: 0;
+    color: #ffd272;
+    font-size: 20px;
     font-weight: 800;
-    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.tienda-donador__perfil {
+.tienda-donador__jugador {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tienda-donador__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.tienda-donador__avatar-ring {
+    position: relative;
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
 }
 
-.tienda-donador__perfil img {
-    height: 150px;
-    max-width: 100%;
+.tienda-donador__avatar-ring::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: transparent;
+    border: 3px solid transparent;
+    animation: ring-spin 1.8s linear infinite;
+}
+
+
+.tienda-donador__avatar-ring img {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
 }
 
 .tienda-donador__nombre {
     margin: 0;
     color: white;
-    font-size: 26px;
-    font-weight: 700;
-    border: 2px solid rgba(255, 255, 255, 0.19);
-    background-color: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(2px);
-    padding: 5px 10px;
-    border-radius: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(255, 210, 114, 0.5);
 }
 
-.tienda-donador__nombre.text-long {
-    font-size: 22px;
-}
-
-.tienda-donador__nombre.text-very-long {
-    font-size: 18px;
-}
-
-@media (max-width: 576px) {
-    .tienda-donador__perfil {
-        flex-wrap: wrap;
-    }
-
-    .tienda-donador__perfil img {
-        height: 120px;
-    }
+.tienda-donador__descripcion {
+    margin: 0;
+    color: rgba(255, 210, 114, 0.75);
+    font-size: 13px;
+    font-weight: 600;
+    font-style: italic;
 }
