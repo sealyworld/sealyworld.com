@@ -7,7 +7,24 @@
     <list default="true" id="b47b131f-6a38-4c66-b0ef-690f5ef5538e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/2025-09-21_01.46.17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/2025-09-21_01.46.21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/2025-09-21_01.46.25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/2025-09-21_01.46.33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/3826663.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/4142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/c00f7718-d39f-4873-8a4d-5c1c8ff034fd_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/fondo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/isla-nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/safiros_coin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/vecteezy_tropical-summer-beach-shore-vector-illustration-background_17763630.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/web-logo-sealy.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +57,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "javascript.preferred.runtime.type.id": "node",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anhua/Documents/work/code/web/sealyworld.com",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anhua/Documents/work/code/web/sealyworld.com&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\anhua\Documents\work\code\SealyWorld\sealyworld.com\src\img" />
@@ -100,7 +117,8 @@
       <workItem from="1759728163448" duration="55000" />
       <workItem from="1759729260690" duration="278000" />
       <workItem from="1759933758868" duration="1291000" />
-      <workItem from="1772837642415" duration="12682000" />
+      <workItem from="1772837642415" duration="13021000" />
+      <workItem from="1772899131127" duration="4270000" />
     </task>
     <servers />
   </component>
