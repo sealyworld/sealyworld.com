@@ -56,7 +56,7 @@
             return;
         }
 
-        const scale = window.innerWidth / 2050;
+        const scale = window.innerWidth / 3000;
         html.style.zoom = scale;
         html.style.overflowX = 'hidden';
     }

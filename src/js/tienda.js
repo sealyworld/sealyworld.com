@@ -235,7 +235,7 @@ async function cargarTopDonador() {
         const elNombre = document.querySelector('.tienda-donador__nombre');
         const elAvatar = document.querySelector('.tienda-donador__avatar-ring img');
         if (elNombre) elNombre.textContent = nombre;
-        if (elAvatar) elAvatar.src = `https://vzge.me/head/512/${encodeURIComponent(nombre)}.png?no=ears,shadow,cape&y=70`;
+        if (elAvatar) elAvatar.src = `https://vzge.me/head/512/${encodeURIComponent(nombre)}.png?no=shadow,cape,ears&y=70`;
     } catch {
         // Mantiene el fallback estático del HTML
     }
@@ -243,11 +243,34 @@ async function cargarTopDonador() {
 
 // ─── Jugador ──────────────────────────────────────────────────────────────────
 
+const AVATAR_DEFAULT = 'https://vzge.me/bust/alex.png?no=shadow,cape,ears';
+
 function validarNombreMinecraft(nombre) {
     if (nombre.length < 3)  return 'El nombre debe tener al menos 3 caracteres.';
     if (nombre.length > 16) return 'El nombre no puede tener más de 16 caracteres.';
     if (!/^[a-zA-Z0-9_]+$/.test(nombre)) return 'Solo se permiten letras, números y guión bajo (_).';
     return null;
+}
+
+async function actualizarAvatar(nombre) {
+    const avatar = document.querySelector('.tienda-jugador__icono img');
+    if (!avatar) return;
+
+    // Mostrar skin al instante sin esperar la verificación
+    avatar.src = `https://vzge.me/bust/${encodeURIComponent(nombre)}.png?no=shadow,cape,ears`;
+
+    // Verificar en segundo plano si la cuenta existe
+    try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 4000);
+        const res = await fetch(`https://api.ashcon.app/mojang/v2/user/${encodeURIComponent(nombre)}`, {
+            signal: controller.signal
+        });
+        clearTimeout(timeout);
+        if (!res.ok) avatar.src = AVATAR_DEFAULT;
+    } catch {
+        avatar.src = AVATAR_DEFAULT;
+    }
 }
 
 function establecerJugador(nombre) {
@@ -276,10 +299,7 @@ function establecerJugador(nombre) {
         setTimeout(() => { input.style.borderColor = ''; }, 1500);
     }
 
-    const avatar = document.querySelector('.tienda-jugador__icono img');
-    if (avatar) {
-        avatar.src = `https://vzge.me/head/512/${encodeURIComponent(jugador)}.png?no=ears,shadow,cape&y=70`;
-    }
+    actualizarAvatar(jugador);
     renderizarItems();
 }
 
@@ -291,8 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputNombre = document.querySelector('.tienda-jugador__entrada');
     if (inputNombre && jugador) {
         inputNombre.value = jugador;
-        const avatar = document.querySelector('.tienda-jugador__icono img');
-        if (avatar) avatar.src = `https://vzge.me/head/512/${encodeURIComponent(jugador)}.png?no=ears,shadow,cape&y=70`;
+        actualizarAvatar(jugador);
     }
 
     // Guardar nombre al hacer clic en el botón o Enter
