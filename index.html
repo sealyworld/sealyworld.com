@@ -47,8 +47,9 @@
             <a class="tienda-cabecera__btn-ip d-none d-md-inline-flex" href="#" target="_blank">
                 SEALYWORLD.COM
             </a>
-            <a class="tienda-cabecera__btn-carrito" href="#tienda-paquetes" title="Carrito de compras" aria-label="Carrito de compras">
+            <a class="tienda-cabecera__btn-carrito" href="#" title="Carrito de compras" aria-label="Carrito de compras">
                 <i class="bi bi-cart3"></i>
+                <span id="carrito-badge" class="carrito-badge" style="display:none">0</span>
             </a>
         </div>
 
@@ -97,12 +98,16 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-stretch">
 
+                <!-- data-package-id: reemplaza con el ID real del paquete en tu tienda Tebex -->
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="tienda-paquetes__tarjeta">
+                    <div class="tienda-paquetes__tarjeta"
+                         data-package-id="7322317"
+                         data-package-name="100 Safiros"
+                         data-package-price="3.07">
                         <div class="tienda-paquetes__cabecera">
                             <h4 class="tienda-paquetes__titulo">100</h4>
                             <div class="tienda-paquetes__icono">
-                                <img src="src/img/PAQUETE_2_-_3GEMA.png" alt="">
+                                <img src="src/img/PAQUETE_2_-_3GEMA.png" alt="100 Safiros">
                             </div>
                             <div class="tienda-paquetes__precio">
                                 <h4 class="tienda-paquetes__moneda">$</h4>
@@ -116,11 +121,14 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="tienda-paquetes__tarjeta">
+                    <div class="tienda-paquetes__tarjeta"
+                         data-package-id="7322363"
+                         data-package-name="500 Safiros"
+                         data-package-price="14.99">
                         <div class="tienda-paquetes__cabecera">
                             <h4 class="tienda-paquetes__titulo">500</h4>
                             <div class="tienda-paquetes__icono">
-                                <img src="src/img/BOLSA.png" alt="">
+                                <img src="src/img/BOLSA.png" alt="500 Safiros">
                             </div>
                             <div class="tienda-paquetes__precio">
                                 <h4 class="tienda-paquetes__moneda">$</h4>
@@ -134,11 +142,14 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="tienda-paquetes__tarjeta">
+                    <div class="tienda-paquetes__tarjeta"
+                         data-package-id="7322365"
+                         data-package-name="1000 Safiros"
+                         data-package-price="24.99">
                         <div class="tienda-paquetes__cabecera">
                             <h4 class="tienda-paquetes__titulo">1000</h4>
                             <div class="tienda-paquetes__icono">
-                                <img src="src/img/COFRE.png" alt="">
+                                <img src="src/img/COFRE.png" alt="1000 Safiros">
                             </div>
                             <div class="tienda-paquetes__precio">
                                 <h4 class="tienda-paquetes__moneda">$</h4>
@@ -152,11 +163,14 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="tienda-paquetes__tarjeta">
+                    <div class="tienda-paquetes__tarjeta"
+                         data-package-id="7322368"
+                         data-package-name="2500 Safiros"
+                         data-package-price="56.72">
                         <div class="tienda-paquetes__cabecera">
                             <h4 class="tienda-paquetes__titulo">2500</h4>
                             <div class="tienda-paquetes__icono">
-                                <img src="src/img/BARRIL.png" alt="">
+                                <img src="src/img/BARRIL.png" alt="2500 Safiros">
                             </div>
                             <div class="tienda-paquetes__precio">
                                 <h4 class="tienda-paquetes__moneda">$</h4>
@@ -213,6 +227,45 @@
 
 </main>
 
+<!-- Carrito Panel -->
+<div id="carrito-panel" class="carrito-panel">
+    <div class="carrito-panel__overlay"></div>
+    <div class="carrito-panel__cajita">
+
+        <div class="carrito-panel__cabecera">
+            <h3 class="carrito-panel__titulo">
+                <i class="bi bi-cart3"></i> Tu Carrito
+            </h3>
+            <button id="carrito-cerrar" class="carrito-panel__cerrar" aria-label="Cerrar carrito">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div id="carrito-vacio" class="carrito-panel__vacio">
+            <i class="bi bi-cart-x"></i>
+            <p>Tu carrito está vacío</p>
+            <span>Agrega paquetes de Safiros para continuar</span>
+        </div>
+
+        <div id="carrito-lista" class="carrito-panel__lista"></div>
+
+        <div class="carrito-panel__pie">
+            <div class="carrito-panel__total-fila">
+                <span class="carrito-panel__total-label">Total:</span>
+                <span id="carrito-total" class="carrito-panel__total-valor">$0.00</span>
+            </div>
+            <div id="carrito-jugador-aviso" class="carrito-panel__jugador-aviso" style="display:none">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                Ingresa tu nombre de jugador primero
+            </div>
+            <button id="btn-checkout" class="carrito-panel__btn-checkout">
+                <i class="bi bi-lock-fill"></i> Ir al Pago
+            </button>
+        </div>
+
+    </div>
+</div>
+
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
@@ -227,6 +280,9 @@
 
 <!-- Main JS File -->
 <script src="src/js/main.js"></script>
+
+<!-- Tienda / Tebex -->
+<script src="src/js/tienda.js"></script>
 
 </body>
 
