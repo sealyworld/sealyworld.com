@@ -66,7 +66,7 @@ function actualizarDorado() {
         const btn = tarjeta.querySelector('.tienda-paquetes__boton');
         if (id && itemEnCarrito(id)) {
             tarjeta.classList.add('tienda-paquetes__tarjeta--en-carrito');
-            if (btn) btn.innerHTML = '<i class="bi bi-check-lg"></i> En Carrito';
+            if (btn) btn.innerHTML = 'En Carrito';
         } else {
             tarjeta.classList.remove('tienda-paquetes__tarjeta--en-carrito');
             if (btn) btn.textContent = 'Comprar';

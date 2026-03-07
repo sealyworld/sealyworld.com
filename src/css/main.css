@@ -48,6 +48,24 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*--------------------------------------------------------------
+# Fade de entrada
+--------------------------------------------------------------*/
+
+#fade-entrada {
+    position: fixed;
+    inset: 0;
+    z-index: 999998;
+    background: #000;
+    pointer-events: none;
+    animation: fade-entrada 8s ease forwards;
+}
+
+@keyframes fade-entrada {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/*--------------------------------------------------------------
 # Cabecera (Header)
 --------------------------------------------------------------*/
 
@@ -279,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
     opacity: 1;
 }
+
 
 /*--------------------------------------------------------------
 # Global Sections
