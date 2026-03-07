@@ -119,7 +119,7 @@
             return;
         }
 
-        const scale = window.innerWidth / 2045;
+        const scale = window.innerWidth / 2050;
         html.style.zoom = scale;
         html.style.overflowX = 'hidden';
     }
