@@ -802,9 +802,9 @@ section,
 --------------------------------------------------------------*/
 
 .tienda-donador__tarjeta {
-    border: 2px solid rgba(255, 210, 114, 0.5);
+    border: 3px solid rgba(255, 208, 109, 0.67);
     backdrop-filter: blur(2px);
-    background: linear-gradient(145deg, rgba(255, 210, 114, 0.12), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(145deg, rgba(255, 210, 114, 0.25), rgba(255, 224, 157, 0.34));
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -863,10 +863,10 @@ section,
 .tienda-donador__avatar-ring::before {
     content: "";
     position: absolute;
-    inset: -4px;
+    inset: -12px;
     border-radius: 50%;
-    background: transparent;
-    border: 3px solid transparent;
+    background: radial-gradient(circle, rgba(255, 210, 114, 0.66) 0%, rgba(255, 210, 114, 0.1) 50%, transparent 75%);
+    z-index: 0;
 }
 
 
@@ -889,7 +889,7 @@ section,
 
 .tienda-donador__descripcion {
     margin: 0;
-    color: rgba(255, 210, 114, 0.75);
+    color: rgb(255, 210, 114);
     font-size: 13px;
     font-weight: 600;
     font-style: italic;
