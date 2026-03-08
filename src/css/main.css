@@ -262,40 +262,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-
-.scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-}
-
-.scroll-top i {
-    font-size: 24px;
-    color: var(--contrast-color);
-    line-height: 0;
-}
-
-.scroll-top:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    color: var(--contrast-color);
-}
-
-.scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-}
-
 
 /*--------------------------------------------------------------
 # Global Sections
@@ -1210,5 +1176,78 @@ body.carrito-abierto {
     .carrito-panel__cajita {
         width: 100%;
         max-width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Mobile
+--------------------------------------------------------------*/
+
+/* Fix background-attachment: fixed en iOS Safari */
+@media (max-width: 767px) {
+    html {
+        background-attachment: scroll, scroll;
+    }
+}
+
+/* Header — botones más compactos en móvil muy pequeño */
+@media (max-width: 400px) {
+    .tienda-cabecera__btn-discord,
+    .tienda-cabecera__btn-carrito {
+        padding: 8px 12px;
+        font-size: 15px;
+    }
+
+    .tienda-cabecera {
+        margin-top: 10px;
+    }
+}
+
+/* Footer — apilado vertical en móvil */
+@media (max-width: 768px) {
+    .tienda-footer__contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .tienda-footer__logo img {
+        height: 70px;
+    }
+
+    .tienda-footer__legal p {
+        font-size: 14px;
+    }
+}
+
+/* Top Donador — apilado vertical en pantallas pequeñas */
+@media (max-width: 480px) {
+    .tienda-donador__jugador {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tienda-donador__info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Soporte — botones ancho completo en pantallas pequeñas */
+@media (max-width: 480px) {
+    .tienda-soporte__botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tienda-soporte__btn-discord,
+    .tienda-soporte__btn-ayuda {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
     }
 }
