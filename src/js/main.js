@@ -26,7 +26,7 @@
 
 
     /**
-     * Escalar página al tamaño de pantalla (referencia 2050px)
+     * Escalar página al tamaño de pantalla (referencia 2200px)
      */
     function fitPageToScreen() {
         const html = document.documentElement;
